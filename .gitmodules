@@ -1,0 +1,3 @@
+[submodule "ohlog"]
+	path = ohlog
+	url = https://github.com/nbdy/ohlog
