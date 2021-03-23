@@ -5,7 +5,7 @@ public:
     MyTCPShell(const std::string& host, int port): rshell::TCPShell<char *>(host, port) {}
 
     void processData(char *data) override {
-        log->i("MyTCPShell", "Data: %s", data);
+        log->i("MydTCPShell", "Data: %s", data);
     }
 };
 
