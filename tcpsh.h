@@ -47,6 +47,7 @@ namespace rshell {
     class TCPShell {
     public:
         TCPShell(std::string host, int port): host(std::move(host)), port(port), log(ohlog::Logger::get()){};
+        TCPShell(std::string host, int port, )
 
         void start() {
             onStart();
@@ -101,6 +102,7 @@ namespace rshell {
                 data << buffer;
                 log->d(LOG_TAG, "Read '%s' which is %i bytes. Processing.", data.str().c_str(), readSize);
                 auto obj = parseData(buffer);
+                processData(obj);
             }
         };
 
