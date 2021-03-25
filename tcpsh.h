@@ -47,7 +47,6 @@ namespace rshell {
     class TCPShell {
     public:
         TCPShell(std::string host, int port): host(std::move(host)), port(port), log(ohlog::Logger::get()){};
-        TCPShell(std::string host, int port, )
 
         void start() {
             onStart();
