@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 3.17)
-project(libtcpsh)
+project(libsck)
 
 set(CMAKE_CXX_STANDARD 17)
 
 include_directories(ohlog)
 
-add_executable(libtcpsh main.cpp tcpsh.h)
-
-add_executable(example example/main.cpp example/MyShell.h tcpsh.h)
+add_executable(example main.cpp sck.h)
+target_link_libraries(example pthread)
