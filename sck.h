@@ -185,6 +185,10 @@ namespace nbdy {
         static void writeTo(int fileDescriptor, const std::string& data) {
             write(fileDescriptor, data.c_str(), data.size());
         }
+
+        void stop() {
+            doRun = false;
+        }
     };
 }
 
